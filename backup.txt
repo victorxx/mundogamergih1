@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+     <meta name="robots" content="index,follow">  <!-- Indica aos mecanismos de busca para indexar e seguir os links -->
+    <meta name="description" content="Aqui você encontra tudo sobre o mundo gamer, com notícias, atualizações e muito mais sobre jogos como Diablo, World of Warcraft, e outros!"> <!-- Descrição da página -->
+    <meta name="keywords" content="games, mundo gamer, notícias de jogos, Diablo, World of Warcraft, RPG, Blizzard, jogos online"> <!-- Palavras-chave para SEO -->
+    <meta name="author" content="Seu Nome ou Nome da Empresa"> <!-- Nome do autor ou da empresa -->
+    
+    <!-- Meta Tags para a Exibição em Dispositivos Móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade para dispositivos móveis -->
+    <meta name="mobile-web-app-capable" content="yes"> <!-- Para que a página seja compatível como um aplicativo na tela inicial -->
+    <meta name="theme-color" content="#111111"> <!-- Cor da barra de navegação no mobile (configurável conforme a cor do tema) -->
+    
+    <!-- Meta Tags para Configuração de Redes Sociais -->
+    <!-- Facebook Open Graph -->
+    <meta property="og:title" content="Tudo sobre o Mundo Gamer"> <!-- Título compartilhado no Facebook -->
+    <meta property="og:description" content="Tudo sobre o mundo dos gamers, com as últimas notícias, dicas e atualizações."> <!-- Descrição para o Facebook -->
+    <meta property="og:image" content="URL_da_imagem_de_preview.jpg"> <!-- Imagem de preview no Facebook -->
+    <meta property="og:url" content="URL_da_página"> <!-- URL da página -->
+    <meta property="og:type" content="website"> <!-- Tipo de conteúdo (website, article, etc.) -->
+    
+    <title>Tudo sobre o mundo nerd dos gamers</title>
+    <style>
+        body {
+            text-align: center;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: aqua;
+            line-height: 1.6;
+        }
+        canvas {
+            background-color: black;
+            display: block;
+            margin-top: 20px;
+        }
+        a {
+            color: #00f;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        #content-container {
+            width: 80%;
+            max-width: 800px;
+        }
+        #ads-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tudo sobre o mundo gamer</h1>
+    <canvas id="okok" width="600" height="400"></canvas>
+    <div id="content-container">
+        <!-- O conteúdo principal será adicionado aqui -->
+    </div>
+    <div id="ads-container">
+        <!-- A seção de propaganda será gerada dinamicamente aqui -->
+    </div>
+
+    <script>
+        // Função para criar e adicionar textos
+        function addTextContent(content) {
+            const paragraph = document.createElement('p');
+            paragraph.textContent = content;
+            return paragraph;
+        }
+
+        // Texto principal sobre o WoW
+        const textos = [
+            'Lançado em 2004 pela Blizzard Entertainment, World of Warcraft (WoW) não é apenas um jogo — é uma verdadeira revolução no mundo dos jogos online. Como um dos MMORPGs (Massively Multiplayer Online Role-Playing Games) mais icônicos da história, WoW não apenas redefiniu o gênero, mas também construiu uma comunidade global de milhões de jogadores que vivem e respiram Azeroth, o mundo fictício onde o jogo acontece.',
+            'O enredo de World of Warcraft é épico e imersivo. O jogo acontece no continente de Azeroth, onde duas facções principais, a Aliança e a Horda, estão em constante conflito por recursos e poder. Ao longo dos anos, o enredo se expandiu para incluir raças como elfos, orcs, anões, elfos noturnos, trolls, mortos-vivos e muitas outras, cada uma com sua própria história e complexidade.',
+            'Lançamento de Diablo IV: Diablo IV foi lançado em 6 de junho de 2023, e trouxe diversas melhorias em relação aos jogos anteriores da série. A Blizzard implementou um mundo aberto, gráficos de última geração, e a tão aguardada mecânica de mundo compartilhado, onde os jogadores podem interagir em tempo real.'
+        ];
+
+        // Adicionando o conteúdo principal ao container
+        const contentContainer = document.getElementById('content-container');
+        textos.forEach(texto => {
+            const p = addTextContent(texto);
+            contentContainer.appendChild(p);
+        });
+
+        // Adicionando as propagandas
+        const adsContainer = document.getElementById('ads-container');
+
+        const pAds = document.createElement('p');
+        pAds.innerHTML = `SEGURO DE CARRO CONSÓRCIOS <a href="https://victorxx.github.io/VPSVENDA/contatoroberto.html">CONTATO</a><br>
+                          <a href="https://victorxx.github.io/airbnbrandom01/">GANHE DINHEIRO COM AIRBNB</a><br><br>
+                          CRÉDITO PESSOAL <a href="https://geocredibnkvitoria.com/">Conferir</a>
+                          <br><br>
+                          <a href="https://victorxx.github.io/randomizardornoticiavitoria01/ads.html">Estou com sorte</a>
+                          <br>
+                          <br>
+                          <a href="https://victorxx.github.io/topicogithub01/randomizador.html">Escolha um tópico novo</a>
+                          <br>
+                          <br>
+                          
+                          
+                          
+                          
+                          `;
+
+        adsContainer.appendChild(pAds);
+
+        // Função para desenhar algo simples no canvas
+        const canvas = document.getElementById('okok');
+        const ctx = canvas.getContext('2d');
+        
+        // Desenhando um simples círculo no canvas
+        ctx.fillStyle = 'aqua';
+        ctx.beginPath();
+        ctx.arc(300, 200, 50, 0, Math.PI * 2, true);
+        ctx.fill();
+    </script>
+</body>
+</html>
